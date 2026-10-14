@@ -1,0 +1,12 @@
+= Změny formátu
+// Jen změny formátu (schéma, výběr, vzorky). Změny textu dokumentace -> docs/<lang>/changelog.adoc
+
+== 2.1
+
+* Typ vozidla `heavyVehicle` (výčet `VehicleTypeEnum`).
+* Nové kategorie vybavení zapisované jako `other` s popisem v češtině a angličtině (lavička, směnárna, vysavač, cvičební prvky, el. přípojka 400 V a 230 V, dobíjecí kiosek, WC s přebalovacím koutkem).
+* Vzorek Vražné (P, L) podle GN 2026.06.
+
+== 2.0
+
+* Převod z DATEX II 2.3 do DATEX II 3.4 (2024).

@@ -1,0 +1,11 @@
+# Metadata české dokumentace. Verze dokumentace = <FORMAT.yaml version>.<revision> (tag docs-cs-vX.Y.N)
+format: ../../FORMAT.yaml     # právě jeden formát, který dokumentace popisuje
+revision: 0                   # zvyšovat při změně textu beze změny formátu (každý jazyk zvlášť)
+date: '2026-10-14'
+author:                       # autor dokumentace (může se lišit od správce formátu)
+  name: Petr Bureš
+  company: TamTam Research s.r.o.
+perex: 'Tento dokument popisuje datový formát, používaný pro poskytování statického popisu dálničních odpočívek a parkovišť pro nákladní vozidla. Na tabulku odpočívek se odkazují zprávy formátu x-format:cz-ndic_d2-itp-situation-v2.0 s aktuálním stavem a obsazeností. Formát vychází z publikace prk:ParkingTablePublication modelu DATEX II 3.4.'
+keywords: DATEX II, NDIC, ParkingTablePublication, odpočívky, parkování nákladních vozidel
+tables:
+  scope: all                  # all = tabulky všech tříd profilu, samples = jen tříd ze vzorků

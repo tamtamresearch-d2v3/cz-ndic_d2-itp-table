@@ -1,0 +1,11 @@
+# Metadata of the English documentation. Verze dokumentace = <FORMAT.yaml version>.<revision> (tag docs-en-vX.Y.N)
+format: ../../FORMAT.yaml     # právě jeden formát, který dokumentace popisuje
+revision: 0                   # zvyšovat při změně textu beze změny formátu (každý jazyk zvlášť)
+date: 2026-01-01
+author:                       # autor dokumentace (může se lišit od správce formátu)
+  name: Petr Bureš
+  company: TamTam Research s.r.o.
+perex: This document describes the data format …
+keywords: DATEX II, NDIC
+tables:
+  scope: all                  # all = tabulky všech tříd profilu, samples = jen tříd ze vzorků

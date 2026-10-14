@@ -1,0 +1,7 @@
+# Hlídá novou verzi docs-kitu (reusable workflow) a otevře PR se změnou ref.
+# Verzi image v .github/workflows/format.yml a Makefile je třeba změnit ve stejném PR.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly }

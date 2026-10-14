@@ -1,0 +1,46 @@
+= cz-ndic_d2-itp-table
+:toc: macro
+
+Repozitář formátu NDIC `cz-ndic_d2-itp-table` – specifikace (FSP) a její dokumentace.
+
+toc::[]
+
+== Obsah
+
+[horizontal]
+`FORMAT.yaml`:: metadata formátu: `id` (`x-format:cz-ndic_d2-itp-table-vX.Y`), verze MAJOR.MINOR
+`schema/`:: závazné XSD (generováno webtoolem DATEX II)
+`sel/`:: výběr profilu z webtoolu – zdroj pravdy pro schéma
+`samples/`:: vzorky; každý musí být validní vůči schématu
+`CHANGELOG.adoc`:: změny formátu
+`docs/`:: dokumentace (AsciiDoc); každá jazyková varianta `docs/<lang>/` má vlastní `DOC.yaml` s revizí, `annotations.<lang>.yaml` s texty tabulek
+
+== Vydání
+
+[cols="1,2,2"]
+|===
+|tag |co vznikne |podmínky
+
+|`vX.Y` |`cz-ndic_d2-itp-table-vX.Y.zip` (FORMAT.yaml, schema, sel, samples, CHANGELOG) |`FORMAT.yaml version = X.Y`, validní vzorky
+|`docs-<lang>-vX.Y.N` |PDF + HTML jazykové varianty `<lang>` z obsahu specifikace v tagu `vX.Y` |`FORMAT.yaml version = X.Y`, `docs/<lang>/DOC.yaml revision = N`, bez osiřelých anotací
+|===
+
+== Lokální práce
+
+S Dockerem (nic dalšího není potřeba):
+
+[source,bash]
+----
+make check      # verze + validace vzorků
+make tables     # jen tabulky elementů + report (rychlé)
+make docs       # pracovní HTML + PDF do build/dist
+----
+
+Bez make (Windows PowerShell):
+
+[source,powershell]
+----
+docker run --rm -v "${PWD}:/work" -w /work ghcr.io/ndic/ndic-docs-kit:0.6.3 d2doc build .
+----
+
+Postup psaní dokumentace a pravidla verzování viz README v repozitáři `ndic-docs-kit`.

@@ -1,0 +1,5 @@
+== XML structure
+
+include::{kitdir}/shared/en/table-legend.adoc[]
+
+include::{gendir}/elements-en.adoc[]

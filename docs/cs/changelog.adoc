@@ -1,0 +1,6 @@
+== Historie změn dokumentace
+
+// Revize dokumentace (MAJOR.MINOR.REVIZE). Změny formátu viz CHANGELOG.adoc ve specifikaci.
+=== 2.1.0
+
+* první vydání dokumentace

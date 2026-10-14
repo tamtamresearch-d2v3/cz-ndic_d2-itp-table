@@ -1,0 +1,26 @@
+# Metadata formátu – součást vydání specifikace (tag v2.1).
+id: x-format:cz-ndic_d2-itp-table-v2.1
+version: '2.1'
+name:
+  cs: DATEX II Parking Table Publication – Tabulka dálničních odpočívek
+  en: DATEX II Parking Table Publication – Table of motorway rest areas
+description:
+  cs: 'Statický popis dálničních odpočívek a parkovišť pro nákladní vozidla: odpočívka, vjezdy, parkovací lokality, logické a fyzické skupiny parkovacích míst, parkovací stání, služby a vybavení.'
+  en: 'Static description of motorway rest areas and truck parking: rest area, accesses, parking sites, logical and physical groups of parking spaces, parking spaces, services and equipment.'
+publisher:
+  cs: Národní dopravní informační centrum
+  en: National Traffic Information Centre
+model:
+  name: DATEX II
+  version: '3.4'
+  publication: ParkingTablePublication
+  extensions: []
+schema:
+  dir: schema
+  entry: DATEXII_3_D2Payload.xsd
+selection: sel/cz-ndic_d2-itp-table.sel
+samples: samples
+maintainer:
+  name: Petr Bureš
+  company: TamTam Research s.r.o.
+  url: https://www.tamtamresearch.com

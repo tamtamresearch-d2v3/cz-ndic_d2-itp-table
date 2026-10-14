@@ -1,0 +1,4 @@
+== Koncepty
+
+Popis konceptů formátu: co publikace obsahuje, statická vs. dynamická část, popis polohy,
+verzování záznamů. Odkazy na normy: <<EN16157-3>>.

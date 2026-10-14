@@ -1,0 +1,5 @@
+== Příklady
+
+// Výřezy vzorků přes tagy – ve vzorku: <!-- tag::location[] --> … <!-- end::location[] -->
+// Celý vzorek: include::{samplesdir}/example.xml[]
+Vzorky jsou součástí balíčku specifikace `{schema-uri}.zip`.

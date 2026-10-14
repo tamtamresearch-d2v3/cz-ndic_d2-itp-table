@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:egi="http://datex2.eu/schema/3/energyInfrastructure" version="3.4" targetNamespace="http://datex2.eu/schema/3/energyInfrastructure" xmlns:fac="http://datex2.eu/schema/3/facilities" xmlns:com="http://datex2.eu/schema/3/common" xmlns:loc="http://datex2.eu/schema/3/locationReferencing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/locationReferencing" schemaLocation="DATEXII_3_LocationReferencing.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/facilities" schemaLocation="DATEXII_3_Facilities.xsd" />
+  <xs:complexType name="_PricingPolicyEnum">
+    <xs:simpleContent>
+      <xs:extension base="egi:PricingPolicyEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="EnergyPricingPolicy">
+    <xs:sequence>
+      <xs:element name="pricingPolicy" type="egi:_PricingPolicyEnum" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="combinationWithParkingFee" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="discount" type="com:Percentage" minOccurs="0" maxOccurs="1" />
+      <xs:element name="maximumDeliveryFee" type="fac:AmountOfMoney" minOccurs="0" maxOccurs="1" />
+      <xs:element name="minimumDeliveryFee" type="fac:AmountOfMoney" minOccurs="0" maxOccurs="1" />
+      <xs:element name="additionalInformation" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_energyPricingPolicyExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="PricingPolicyEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="pricePerChargingTime" />
+      <xs:enumeration value="pricePerDeliveryUnit" />
+      <xs:enumeration value="contract" />
+      <xs:enumeration value="flatRate" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="free" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
