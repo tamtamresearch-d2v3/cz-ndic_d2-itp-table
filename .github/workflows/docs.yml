@@ -31,7 +31,7 @@ jobs:
           $RUN d2doc build . --outputs html --out build
           mkdir -p public && cp build/dist/*.html public/
           for f in public/*-cs.html; do cp "$f" public/index.html; done
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with: { path: public }
       - id: deploy
         uses: actions/deploy-pages@v4
